@@ -1,0 +1,228 @@
+git init
+git config --global user.name "Polarapu Prasad"
+git config --global user.email "devopstraining2015@gmail.com"
+
+git config --list
+
+git config --global --unset user.name 
+git config --global --unset user.email
+
+----------------------
+touch file1
+ls
+git status
+git add file1
+git status
+git commit -m "label" file1
+git status
+git log
+git show cid
+
+-------------------
+touch file2 file3 file4
+ls
+git status
+git add file2 file3 file4
+or
+git add .
+or
+git add *
+or
+git add -A
+git status
+git commit -m "label"
+
+--------------------------
+git add file1 (workspace to staging)
+git reset head file1  (staging to workspace)
+
+git commit -m "lable" file2 (staging to local)
+git reset --soft cid   (local to staging)
+
+git reset --mixed cid  (local to workspace)
+
+==================================================
+
+git clone https://github.com/polarapu/batch74.git
+ls
+cd batch74
+touch file1
+git status
+git add .
+git status
+git commit -m "label" file1
+git status
+git log
+git push
+
+-----------------------------------------
+git clone https://github.com/polarapu/batch74.git
+ls
+cd batch74
+touch name
+git status
+git add name
+git status
+git commit -m "sample devops file"
+git push
+git pull --rebase
+git push
+
+mkdir name-dir
+ls
+cd name-dir
+touch f1 f2 f3
+cd ..
+git status
+git add .
+git status
+git commit -m "label"
+git push
+git pull --rebase
+git push
+
+Log's
+=======
+git log
+git log -n
+git log --oneline
+git log --oneline -n
+git log --author=name
+git log --author=name --oneline
+git log --author=name -n
+git log --author=name --oneline -n
+git log --since=yy-mm-dd
+or
+git log --after=yy-mm-dd
+
+git log --until=yy-mm-dd
+or
+git log --before=yy-mm-dd
+
+git log --since=yy-mm-dd --until=yy-mm-dd
+or
+git log --after=yy-mm-dd --before=yy-mm-dd
+
+git log --after="yy-mm-dd 00:00" --before="yy-mm-dd 00:00"
+
+git log --grep="label"
+
+git log -- file/dir
+
+Brach
+-------
+git branch
+
+git branch branch-name
+
+git branch
+
+git checkout branch-name
+
+git merge branch-name
+
+git branch -d branch-name  (loacl)
+
+git push origin branch-name
+or
+git push path/c-repo branch-name
+
+git push origin -d branh-name  (central )
+
+
+Stash
+=====
+git stash list
+git stash save "label"
+git stash show stash@{x}
+git stash show -p stash@{x}
+
+POP, APPLY, DROP
+
+POP = cut
+===
+git stash pop
+git stash pop stash@{x}
+
+APPLY = copy
+=====
+git stash apply
+git stash apply stash@{x}
+
+DROP = delete
+====
+git stash drop
+git stash drop stash@{x}
+
+
+diff merge/rebase
+-------------------
+git merge branch-name
+git rebase branch-name
+git pull --rebase
+
+
+alias
+-----
+git log
+git config --global alias.l "log"
+git l
+
+git log --oneline
+git config --global alias.l1 "log --oneline"
+git l1
+
+git status
+git config --global alias.s "status"
+git s
+
+git config --list
+git config --global alias.cl "config --list"
+git cl
+
+git config --global --unset alias.cl
+
+
+.gitignore
+-----------
+
+
+revert
+------
+git revert cid
+
+fork
+---
+
+git diff
+--------
+git diff file-name
+git diff branch1 branch2
+
+git amend
+----------
+git commit --amend -m "label"
+
+git commit -m "label" -m "label2" -m "label3"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
